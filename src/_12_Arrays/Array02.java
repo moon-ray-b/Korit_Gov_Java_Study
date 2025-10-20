@@ -1,4 +1,4 @@
-package _12_Araay;
+package _12_Arrays;
 
 public class Array02 {
     public static void main(String[] args) {
