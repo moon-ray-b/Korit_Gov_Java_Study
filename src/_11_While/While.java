@@ -84,6 +84,8 @@ public class While {
 //        }
 //        System.out.println(i); //시작 값 출력
 
+
+
         //문제 => 1번 부터 100번까지 시강 웨이팅
         //이때 1번부터 차례대로 입장 => **번 손님 입장! 출력
         //10번 손님이 입장할때 한정메뉴가 솔드아웃
@@ -106,6 +108,20 @@ public class While {
 //        System.out.println("솔드 아웃 됐기 때문에 영업 종료 합니다");
 
 
+        //강사님 작성
+//        int i = 1;
+//        int soldOut = 10;
+//        while(i<=100){
+//            System.out.println(i + "번 손님 입장 !");
+//            if (i == soldOut){
+//                System.out.println("한정판매 솔드 아웃!");
+//                break;
+//            }
+//            i++;
+//        }
+//        System.out.println("영업 종료");
+
+
 
 
 
@@ -116,9 +132,9 @@ public class While {
 
 //        int a = 1; // 손님 번호고
 //        int b = 0; // 판매 초기 값
-//
+//        int c = 14;
 //        while (a <=50){ // 50번까지의 대기
-//           if(a == 14){ // 14번 노쇼
+//           if(a == c){ // 14번 노쇼
 //               System.out.println(a + "번 노쇼 발생!");
 //               a++;
 //               continue;// 노쇼이므로 다시 while 돌아가 주문 받음
@@ -126,11 +142,35 @@ public class While {
 //           System.out.println(a + "번 손님 주문 완료"); // 손님 출력문
 //           b++;// 메뉴 1씩 증가
 //
-//           if(b == 19){ // 20개 까지 판매
+//           if(b == 20){ // 20개 까지 판매
 //               System.out.println("솔드아웃 가게 문 닫음");
 //               break; //20까지 나오면 중지
 //           }
 //           a++; // 손님 1씩 증가
 //        }
+
+
+//        int i = 1;
+//        int soldOut = 20;
+//        int noShow = 14;
+
+//        while(i<=50){
+//            System.out.println(i + "번 손님 입장!");
+//            if(i == noShow){
+//                System.out.println(i+"번 손님 노쇼 발생!");
+//               soldOut++;
+//
+//            }else{
+//                System.out.println(i+"번 손님 입장!");
+//            }
+//            if(i==soldOut){
+//                System.out.println("한정판매 종료");
+//                break;
+//            }
+//            i++;
+//        }
+
+
+
     }
 }
