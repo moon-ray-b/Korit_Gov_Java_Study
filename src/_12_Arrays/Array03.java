@@ -16,12 +16,15 @@ public class Array03 {
 
         //For문을 사용해 내림차순
 
-//        for (int i = 0; i < nums.length / 2; i++) {
-//            int temp = nums[i];
-//            nums[i] = nums[nums.length - i - 1];
-//            nums[nums.length - i -1 ] = temp;
+//        for (int i = 0; i < nums.length - 1; i++) {
+//            for (int j = 0; j < nums.length -1 -i; j++) {
+//                if (nums[j] < nums[j + 1]) {
+//                    int temp = nums[j];
+//                    nums[j] = nums[j + 1];
+//                    nums[j + 1] = temp;
+//                }
+//            }
 //        }
-//        System.out.println(Arrays.toString(nums));
 
         //내림차순
 //        Arrays.sort(nums, Comparator.reverseOrder());
@@ -40,36 +43,36 @@ public class Array03 {
 
         //문제
         //평균 구하기
-//        int sum = 0;//총합을 저장하기 위한 변수
-//        float average = 0F;//평균을 저장하기 위한 변수
-//        int[] scores = {100, 88, 100, 100, 90};
-//        //총합: **
-//        //평균: **
-//        for (int i = 0; i <score.length ; i++) {
-//            sum += score[i];
+        int sum = 0;//총합을 저장하기 위한 변수
+        float average = 0F;//평균을 저장하기 위한 변수
+        int[] scores = {100, 88, 100, 100, 90};
+        //총합: **
+        //평균: **
+//        for (int i = 0; i <scores.length ; i++) {
+//            sum += scores[i];
 //        }
-//        for(int score : scores){
-//            sum += score; // 향상된 for문도 가능함
-//        }
-//        average = sum / (float) scores.length;
-//
-//        System.out.println("총합: " + sum);
-//        System.out.println("평균: " + average);
-//
-//        //최대 최솟값 구하기
-//        int[] score2 = {79, 88, 91,33, 100,55, 95};
-//        int max = score2[0];//배열의 첫 번째 값으로 최대값을 초기화
-//        int min = score2[0];//배열의 첫 번쨰 값으로 최솟값을 초기화
-//
-//        for (int i = 1; i < score2.length ; i++) {
-//            if(score2[i] > max){
-//                max = score2[i];
-//            }else if(score2[i] < min){
-//                min = score2[i];
-//            }
-//        }
-//        System.out.println("최댓값 :" +max);
-//        System.out.println("최솟값 :" +min);
+        for(int score : scores){
+            sum += score; // 향상된 for문도 가능함
+        }
+        average = sum / (float) scores.length;
+
+        System.out.println("총합: " + sum);
+        System.out.println("평균: " + average);
+
+        //최대 최솟값 구하기
+        int[] score2 = {79, 88, 91,33, 100,55, 95};
+        int max = score2[0];//배열의 첫 번째 값으로 최대값을 초기화
+        int min = score2[0];//배열의 첫 번쨰 값으로 최솟값을 초기화
+
+        for (int i = 1; i < score2.length ; i++) {
+            if(score2[i] > max){
+                max = score2[i];
+            }else if(score2[i] < min){
+                min = score2[i];
+            }
+        }
+        System.out.println("최댓값 :" +max);
+        System.out.println("최솟값 :" +min);
 
         //문제
         //요일 출력
