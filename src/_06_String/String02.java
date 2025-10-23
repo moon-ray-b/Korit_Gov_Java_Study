@@ -27,6 +27,12 @@ public class String02 {
         System.out.println(s1.concat("! !").concat(s2));
 
 
+        StringBuilder stringBuilder = new StringBuilder();
+        String rsp ="205";
+        char[] charArray=rsp.toCharArray();
+//        stringBuilder.append('a');
+//        stringBuilder.append("hello");
+//        System.out.println(stringBuilder.toString());
 
     }
 }

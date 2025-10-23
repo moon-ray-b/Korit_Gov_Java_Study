@@ -97,7 +97,7 @@ public class Array03 {
         System.out.println("찾을 숫자를 입력하세요(1~10");
         int target = scanner.nextInt();
         int idx = -1;
-        for (int i = 0; i <a.length ; i++) {
+        for (int i = 0; i < a.length ; i++) {
             if(a[i] == target){
                 idx = i;
                 break;
@@ -107,3 +107,30 @@ public class Array03 {
     }
 }
 
+class Solution {
+    public int solution(String[] babbling) {
+        int answer = 0;
+        String[] b = {"aya", "ye", "woo", "ma"};
+        for(int i =0; i < babbling.length; i++){
+            for(int j=0; j < b.length; j++){
+                if(babbling[i].contains(b[j])){
+                    babbling[i] = babbling[i].replace(b[j], "뿡");
+                }
+            }
+            for(String str : babbling){
+                boolean ck = true;
+                for(char c : str.toCharArray()){
+                    System.out.println(c);
+                    if(c != '뿡'){
+                        ck = false;
+                        break;
+                    }
+                }
+                if(ck){
+                    answer++;
+                }
+            }
+        }
+        return answer;
+    }
+}

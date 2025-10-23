@@ -3,7 +3,6 @@ package _13_MultiArray;
 public class Multiarray {
     public static void main(String[] args) {
         //다차원 배열 (2차원)
-
         //영화관 좌석
         // A1~A5 좌석
         // B1~B5 좌석
