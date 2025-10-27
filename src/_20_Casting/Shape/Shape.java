@@ -9,4 +9,17 @@ package _20_Casting.Shape;
 * area() -> double, drawInternal() protected-> void
 * */
 public abstract class Shape {
+    public void render(){
+        preDraw();
+        drawInternal();
+        postDraw();
+    }
+    protected void preDraw(){
+        System.out.println("그리기 준비");
+    }
+    protected void postDraw(){
+        System.out.println("그리기 마무리");
+    }
+    public abstract double area();
+    protected abstract void drawInternal();
 }

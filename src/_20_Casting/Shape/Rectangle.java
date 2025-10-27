@@ -5,5 +5,40 @@ package _20_Casting.Shape;
 * area() => 직사각형 넓이 구하기
 * drawInternal() => 직사각형 그리기( 가로 -**, 세로-**)
 * */
-public class Rectangle {
+public class Rectangle extends Shape {
+    private double w;
+    private double h;
+
+    public Rectangle(double w, double h) {
+        this.w = w;
+        this.h = h;
+    }
+
+    public double getW() {
+        return w;
+    }
+
+    public void setW(double w) {
+        this.w = w;
+    }
+
+    public double getH() {
+        return h;
+    }
+
+    public void setH(double h) {
+        this.h = h;
+    }
+
+    @Override
+    public double area() {
+        double si = w * h;
+        System.out.println(si);
+        return si;
+    }
+
+    @Override
+    protected void drawInternal() {
+        System.out.println("가로 - " + w +"세로 - " + h);
+    }
 }
