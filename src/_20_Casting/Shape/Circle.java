@@ -1,0 +1,9 @@
+package _20_Casting.Shape;
+/*
+* 속성으로 r(반지름) ->double
+* allArgs
+* area()->원의 넓이 구하는 공식(원주율 3.14)
+* drawInternal() => 출력(원 그리기 r = **)
+* */
+public class Circle {
+}
