@@ -21,8 +21,8 @@ public class Main2 {
 
         Animal animal2 = new Dog();
         ((Dog)animal2).wagTail();
-        if (animal2 instanceof Dog dog2){
-            //Dog dog2 = (Dog) animal2; //ClassCastException 방지
+        if (animal2 instanceof Dog){
+            Dog dog2 = (Dog) animal2; //ClassCastException 방지
             dog2.wagTail();
         }else {
             System.out.println("불가능한 다운 캐스팅 입니다.");
