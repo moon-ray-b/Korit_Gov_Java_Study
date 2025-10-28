@@ -32,7 +32,7 @@ public class Triangle extends Shape{
 
     @Override
     public double area() {
-        double tr = (base * height)/2;
+        double tr = (base * height)/2.0;
         System.out.println(tr);
         return tr;
     }

@@ -2,14 +2,20 @@ package _20_Casting.Shape;
 
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle(5);
-        circle.render();
-        circle.area();
-        Rectangle rectangle = new Rectangle(5, 4);
-        rectangle.render();
-        rectangle.area();
-        Triangle triangle = new Triangle(5,4);
-        triangle.render();
-        triangle.area();
+        Shape sh1 = new Circle(5);
+        sh1.render();
+
+        Shape sh2 = new Rectangle(5, 4);
+        sh2.render();
+
+        Shape sh3 = new Triangle(5, 4);
+        sh3.render();
+
+        double total = 0;
+        Shape[] shapes = {sh1, sh2, sh3};
+        for( Shape shape : shapes ){
+            total += shape.area();
+        }
+        System.out.println(total);
     }
 }
