@@ -13,12 +13,14 @@ package _24_Builder.User;
  * */
 public class UserMain {
     public static void main(String[] args) {
-        User user = new User.Builder()
+        User user = User.builder()
+//                new User.Builder()
                 .userId(9842)
                 .username("찬익")
                 .password("4")
                 .email("bae9842@naver.comf")
                 .build();
-        System.out.println(user);
+
+//        System.out.println(user);
     }
 }

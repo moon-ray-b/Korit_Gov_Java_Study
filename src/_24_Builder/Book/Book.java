@@ -57,7 +57,7 @@ public class Book  {
             return this;
         }
         public Book build(){
-            if(title == null || author == null){
+            if((title == null || title.isBlank()) || (author == null || author.isBlank())){
                 System.out.println("필드가 비어있습니다.");
             }
             return new Book(this);
