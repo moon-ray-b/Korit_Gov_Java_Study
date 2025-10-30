@@ -2,19 +2,24 @@ package _25_LayeredArchitecture.view;
 
 import _25_LayeredArchitecture.dto.SigninReqDto;
 import _25_LayeredArchitecture.dto.SignupReqDto;
+import _25_LayeredArchitecture.dto.TodoRegisterReqDto;
+import _25_LayeredArchitecture.entity.Todo;
 import _25_LayeredArchitecture.entity.User;
+import _25_LayeredArchitecture.service.TodoService;
 import _25_LayeredArchitecture.service.UserService;
 
 import java.util.Scanner;
 
 public class TodoListView {
+    private final TodoService todoService;
     private Scanner scanner;
     private User principal;
     private UserService userService;
 
-    public TodoListView(UserService userService){
+    public TodoListView(UserService userService, TodoService todoService){
         scanner = new Scanner(System.in);
         this.userService = userService;
+        this.todoService = todoService;
     }
 
     public void homeView(){
@@ -35,11 +40,11 @@ public class TodoListView {
                 break;
             }else if("1".equals(cmd)){
                 // TodoList 관리
-                todoListMenuView();
                 if (principal == null){
                     System.out.println("로그인 후 사용 가능합니다,");
                     continue;
                 }
+                todoListMenuView();
             }else if ("2".equals(cmd) && principal == null){
                 // 회원가입
                 signupView();
@@ -114,13 +119,36 @@ public class TodoListView {
             System.out.print(">>>");
             String cmd = scanner.nextLine();
 
+
+            System.out.println(" Todo 등록 완료!\n");
+
+
             if ("b".equals(cmd)){
                 break;
             }else if ("1".equals(cmd)){
                 System.out.println("[ Todo 등록 ]");
+                System.out.println("내용 입력하시요 >>> ");
+                String contents = scanner.nextLine();
                 //LocalDateTime.now()
             } else if ("2".equals(cmd)) {
                 System.out.println("[ Todo 조회 ]");
+
+                Todo[] todos = todoService.getTodosByUserId(principal.getUserId());
+
+                if (todos.length == 0) {
+                    System.out.println("등록된 Todo가 없습니다.\n");
+                    continue;
+                }
+
+                for (Todo todo : todos) {
+                    System.out.println(todo.getTodoId() + ". " + todo.getContents() +
+                            " (" + todo.getCreateDt() + ")");
+                }
+                System.out.println();
+
+            } else {
+                System.out.println("잘못 입력하였습니다.");
+
             }
         }
     }

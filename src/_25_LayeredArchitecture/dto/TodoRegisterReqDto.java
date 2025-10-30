@@ -11,6 +11,6 @@ import lombok.ToString;
 @Setter
 @ToString
 public class TodoRegisterReqDto {
-    private String contents;
-    private User user;
+    private String contents; // 작성할 내용
+    private User user; // 작성자 정보
 }

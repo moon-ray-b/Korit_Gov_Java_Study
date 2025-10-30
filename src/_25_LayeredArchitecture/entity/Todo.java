@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 public class Todo {
-    private int todoId;
-    private String contents;
-    private User user;
-    private LocalDateTime createDt;
+    private int todoId; //고유 아이디
+    private String contents;// 할 일 내용
+    private User user;// 작성자 명
+    private LocalDateTime createDt;// 생성 시각
 }
