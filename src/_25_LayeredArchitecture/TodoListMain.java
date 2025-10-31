@@ -14,8 +14,7 @@ public class TodoListMain {
         TodoList todoList = new TodoList();
         UserService userService = new UserService(userList);
         TodoService todoService = new TodoService(todoList);
-        TodoListView todoListView = new TodoListView(userService, todoService);
-        todoListView.homeView();
-        System.out.println(LocalDateTime.now());
+        TodoListView view = new TodoListView(userService, todoService);
+        view.homeView();
     }
 }
