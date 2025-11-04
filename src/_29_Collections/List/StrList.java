@@ -20,7 +20,7 @@ public class StrList {
         List<String> strList2 = new ArrayList<>();
         strList2.add("java");
         strList2.add("python");
-        strList2.add("c#");
+        strList2.add("C#");
         strList2.add("javascript");
         strList2.add("kotlin");
 
@@ -29,8 +29,8 @@ public class StrList {
 //        strArray[1] = "이찬익";
 //        System.out.println(strArray[0]);
 
-        System.out.println(strList2.get(3));
-        System.out.println(strList2);
+            System.out.println(strList2.get(3));
+            System.out.println(strList2);
 
         //특정 요소의 포함 여부 -> contains()
         String  serarchElam1 = "python";
