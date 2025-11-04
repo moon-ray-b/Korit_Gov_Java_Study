@@ -12,7 +12,7 @@ public class SignupReqDto {
     private String password;
     private String confirmPassword;
 
-    public User toEntity(){
+    public User toEntity() {
         return User.builder()
                 .userId(0)
                 .username(username)

@@ -7,16 +7,16 @@ import java.util.List;
 
 public class UserRepositoryImpl2 implements UserRepository{
     private static UserRepositoryImpl2 instance;
-    private List<User>users;
+    private List<User> users;
     private int autoIncrementId;
 
-    private UserRepositoryImpl2(){
+    private UserRepositoryImpl2() {
         users = new ArrayList<>();
         autoIncrementId = 1;
     }
 
-    public static UserRepositoryImpl2 getInstance(){
-        if (instance == null){
+    public static UserRepositoryImpl2 getInstance() {
+        if (instance == null) {
             instance = new UserRepositoryImpl2();
         }
         return instance;
@@ -26,13 +26,13 @@ public class UserRepositoryImpl2 implements UserRepository{
     public void insert(User user) {
         user.setUserId(autoIncrementId++);
         users.add(user);
-        System.out.println(user);
+        System.out.println(users);
     }
 
     @Override
     public User findByUsername(String username) {
-        for (User user : users){
-            if (user.getUsername().equals(username)){
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
                 return user;
             }
         }

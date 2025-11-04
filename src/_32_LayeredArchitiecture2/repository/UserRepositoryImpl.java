@@ -9,15 +9,16 @@ public class UserRepositoryImpl implements UserRepository{
     private User[] users;
     private int autoIncrementId;
 
-    private UserRepositoryImpl(){
+    private UserRepositoryImpl() {
         users = new User[0];
         autoIncrementId = 1;
     }
-    public static UserRepositoryImpl getInstance(){
-        if (instance ==null){
+
+    public static UserRepositoryImpl getInstance() {
+        if (instance == null) {
             instance = new UserRepositoryImpl();
         }
-        return  instance;
+        return instance;
     }
 
     @Override
@@ -30,8 +31,8 @@ public class UserRepositoryImpl implements UserRepository{
 
     @Override
     public User findByUsername(String username) {
-        for (User user : users){
-            if (user.getUsername().equals(username)){
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
                 return user;
             }
         }
